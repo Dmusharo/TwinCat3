@@ -4,6 +4,7 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	bRunOnlyOnce:BOOL:=FALSE;
+	bRunOnlyOnce1:BOOL:=TRUE;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF NOT  bRunOnlyOnce THEN 
@@ -12,10 +13,5 @@ END_VAR]]></Declaration>
 					bRunOnlyOnce:=TRUE;
 END_IF	  ]]></ST>
     </Implementation>
-    <LineIds Name="MAIN">
-      <LineId Id="27" Count="2" />
-      <LineId Id="31" Count="0" />
-      <LineId Id="12" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
