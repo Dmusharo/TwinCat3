@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Clesious_to_faringate" Id="{f2a1ad5d-45b7-4dd1-8149-2f30a871a48a}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION Clesious_to_faringate : REAL
+VAR_INPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <LineIds Name="Clesious_to_faringate">
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
