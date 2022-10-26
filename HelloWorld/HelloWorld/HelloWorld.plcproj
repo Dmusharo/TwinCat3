@@ -17,6 +17,9 @@
     <LibraryReferences>{d0056c5d-6277-429a-b555-43a6682bdc0f}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DUTs\E_EventType.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DUTs\ST_Event.TcDUT">
       <SubType>Code</SubType>
     </Compile>
@@ -30,6 +33,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\Test_function_block.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\UpdateEventTimestampWithSystemTime.TcPOU">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

@@ -4,14 +4,34 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	bRunOnlyOnce:BOOL:=FALSE;
-	bRunOnlyOnce1:BOOL:=TRUE;
+	fOneFloat: REAL;
+	sThisIsString: STRING;
+	nAnInteger: INT;
+	
+	nReturnedNumberOfBytesForFloat: UDINT;
+	nReturnedNumberOfBytesForString: UDINT;
+	nReturnedNumberOfBytesForInteher: UDINT;
+	stThisIsOurFirstUnstanceOfAStructure: ST_Event;
+	bBoolean:BOOL:=FALSE;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF NOT  bRunOnlyOnce THEN 
     ADSLOGDINT( msgCtrlMask := ADSLOG_MSGTYPE_ERROR OR ADSLOG_MSGTYPE_LOG, 
                     msgFmtStr := 'Hello, World!', dintArg:= 4711);
 					bRunOnlyOnce:=TRUE;
-END_IF	  ]]></ST>
+END_IF	  
+nReturnedNumberOfBytesForFloat:=SIZEOF(fOneFloat);
+nReturnedNumberOfBytesForString:=SIZEOF(sThisIsString);
+nReturnedNumberOfBytesForInteher:=SIZEOF(nAnInteger);
+
+IF NOT bBoolean THEN
+       UpdateEventTimestampWithSystemTime(stEvent:=stThisIsOurFirstUnstanceOfAStructure);
+	   bBoolean:=TRUE;
+END_IF;
+	   
+
+
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
